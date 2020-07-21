@@ -10,6 +10,14 @@
 
 }
 
+h1 {
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1px solid white;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -18,7 +26,7 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: #B0E4EA;
+  background-image: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-14.jpg');
 }
 
 body.correct {
@@ -80,6 +88,13 @@ body.wrong {
   align-items: center;
 }
 
+.jumbotron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 150px 20px 0;
+}
+
 .hide {
   display: none;
 }
@@ -93,6 +108,27 @@ body.wrong {
 #timer {
   display: flex;
   justify-content: end;
+}
+
+#myimage {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 200px;
+  width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  #myimage {
+    width: 300px;
+    height: 150px;
+    margin-left: 80px;
+  }
+
+  .container {
+    width: 500px;
+    margin-left: 50px;
+  }
 }
 
 
