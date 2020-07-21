@@ -10,9 +10,11 @@
   </head>
   <body>
 
+    <audio id="starWarsTheme" src="assets/Star Wars (Main Theme).mp3" preload="auto" autoplay></audio>
     <audio src="assets/R2D2a.wav" id="correct-sound" preload="auto"></audio>
     <audio src="assets/chewycry.wav" id="wrong-sound" preload="auto"></audio>
     <audio src="assets/Blast door.mp3" id="next-sound" preload="auto"></audio>
+    <audio id="saberSound" src="assets/SaberOn.mp3" preload="auto"></audio>
 
     <p id="countdown" class ="hide"></p>
     <p id="point-counter" class="hide"></p>
@@ -21,8 +23,8 @@
         <img id="myimage" src="assets/Star_Wars_logo-1.png"> 
     </div>
     
-    <audio id="starWarsTheme" src="assets/Star Wars (Main Theme).mp3" preload="auto" autoplay></audio>
-    <audio id="saberSound" src="assets/SaberOn.mp3"></audio>
+    
+    
     <div class="container">
       <div id="question-container" class="hide">
         <div id="question">Question</div>
@@ -36,6 +38,7 @@
       <div class="controls">
         <button id="start-btn" class="start-btn btn">Start</button>
         <button id="next-btn" class="next-btn btn hide">Next</button>
+        <a href="highscores.html"><button id="finish-btn" class="finish-btn btn hide">Finish</button></a>
       </div>
     </div>
    

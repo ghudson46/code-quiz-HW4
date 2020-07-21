@@ -11,6 +11,8 @@ var points = document.getElementById("point-counter");
 var r2 = document.getElementById("correct-sound");
 var chewie = document.getElementById("wrong-sound");
 var blastDoor = document.getElementById("next-sound");
+var gameScore = 1;
+var finishBtn = document.getElementById("finish-btn")
 
 
 let shuffledQuestions, currentQuestionIndex;
@@ -76,17 +78,20 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide');
   } else {
-    startButton.innerText = 'restart';
-    startButton.classList.remove('hide');
-  }
-  
+    finishBtn.innerText = 'Finish';
+    finishBtn.classList.remove('hide');
+  } 
 }
+
+
 
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct');
     r2.play();
+    gameScore++;
+    points.innerHTML = 'SCORE: ' + gameScore;
     
   } else {
     element.classList.add('wrong');
