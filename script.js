@@ -6,32 +6,31 @@ var nextButton = document.getElementById("next-btn");
 var theme = document.getElementById("starWarsTheme");
 var saberSound = document.getElementById("saberSound");
 var image = document.getElementById("myimage");
+var timer = document.getElementById("countdown");
+var points = document.getElementById("point-counter");
+var r2 = document.getElementById("correct-sound");
+var chewie = document.getElementById("wrong-sound");
+var blastDoor = document.getElementById("next-sound");
+
 
 let shuffledQuestions, currentQuestionIndex;
 
-// var counter = 0;
-// var timeLeft = 90;
+document.addEventListener('DOMContentLoaded', () => { 
 
-// function convertSeconds(s) {
-//   var min = foor(s / 60);
-//   var sec = 2 % 60;
-//   return nf(min, 2) + ' : ' + nf(sec, 2);
-// }
-setTimeout(function img(){
-  image.style.display = 'flex';
-  theme.play();
-},1000);
 
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
-  saberSound.play();
+  blastDoor.play();
   setNextQuestion();
 });
 
 
 function startGame() {
+  theme.pause();
   startButton.classList.add('hide');
+  timer.classList.remove('hide');
+  points.classList.remove('hide');
   shuffledQuestions = questions.sort(() => Math.random() - .5);
   currentQuestionIndex = 0;
   questionContainerEl.classList.remove('hide');
@@ -87,6 +86,8 @@ function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct');
+    r2.play();
+    
   } else {
     element.classList.add('wrong');
   }
@@ -96,6 +97,7 @@ function clearStatusClass(element, correct) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
+
 
 var questions = [
   {
@@ -189,3 +191,6 @@ var questions = [
     ],
   }
 ]
+
+
+});
