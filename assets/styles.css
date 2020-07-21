@@ -31,7 +31,7 @@ body {
 
 p {
   background-color: #858b97;
-  color: #696969;
+  color: black;
   height: 70px;
   width: 300px;
   border: 1px solid gold;
@@ -51,7 +51,7 @@ body.wrong {
   width: 800px;
   max-width: 80%;
   text-align: center;
-  background-color: white;
+  background-color: #696969;
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 0 10px 2px;

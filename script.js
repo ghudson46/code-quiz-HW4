@@ -11,9 +11,9 @@ var points = document.getElementById("point-counter");
 var r2 = document.getElementById("correct-sound");
 var chewie = document.getElementById("wrong-sound");
 var blastDoor = document.getElementById("next-sound");
-var gameScore = 1;
+var gameScore = 0;
 var finishBtn = document.getElementById("finish-btn")
-
+var startTime = 45;
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -29,6 +29,15 @@ nextButton.addEventListener("click", () => {
 
 
 function startGame() {
+  var interval = setInterval(() => {
+    if (startTime === 0) {
+      clearInterval(interval);
+    }
+    timer.innerHTML = startTime;
+    startTime--;
+  }, 1000);
+  
+  console.log(interval);
   theme.pause();
   startButton.classList.add('hide');
   timer.classList.remove('hide');
@@ -84,17 +93,16 @@ function selectAnswer(e) {
 }
 
 
-
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct');
     r2.play();
     gameScore++;
-    points.innerHTML = 'SCORE: ' + gameScore;
-    
+    points.innerHTML = 'SCORE: ' + gameScore; 
   } else {
     element.classList.add('wrong');
+    startTime = startTime - 5;
   }
 }
 
