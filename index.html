@@ -10,12 +10,11 @@
   </head>
   <body>
 
-    <audio id="starWarsTheme" src="assets/Star Wars (Main Theme).mp3" preload="auto" autoplay></audio>
-    <audio src="assets/R2D2a.wav" id="correct-sound" preload="auto"></audio>
-    <audio src="assets/chewycry.wav" id="wrong-sound" preload="auto"></audio>
-    <audio src="assets/Blast door.mp3" id="next-sound" preload="auto"></audio>
-    <audio id="saberSound" src="assets/SaberOn.mp3" preload="auto"></audio>
-    <audio id="saberDown" src="assets/saberdown.wav" preload="auto"></audio>
+    <audio src="assets/R2D2a.wav" id="correct-sound"></audio>
+    <audio src="assets/chewycry.wav" id="wrong-sound"></audio>
+    <audio src="assets/Blast door.mp3" id="next-sound"></audio>
+    <audio id="saberSound" src="assets/SaberOn.mp3"></audio>
+    <audio id="saberDown" src="assets/saberdown.wav"></audio>
 
     <p id="countdown" class ="hide"></p>
     <p id="point-counter" class="hide"></p>
@@ -38,10 +37,21 @@
         </div>
       </div>
       <div class="controls">
-        <button id="start-btn" class="start-btn btn">Start</button>
-        <button id="next-btn" class="next-btn btn hide">Next</button>
-        <a href="highscores.html"></a><button id="finish-btn" class="finish-btn btn hide">Finish</button></a>
+        <button id="start-btn" class="start-btn btn">START</button>
+        <button id="next-btn" class="next-btn btn hide">NEXT</button>
       </div>
+
+      <div id="finalScore" class="hide">
+        <p id="scoreCount"></p>
+        <div class="form-group">
+            <input type="name" class="form-control" id="yourName" aria-describedby="name" placeholder="Write Your Initials Here">
+            <button id="submitBtn" class="submit-btn btn">SUBMIT</button>
+        </div>
+        <h3>HIGH SCORES<hr></h3>
+        <ul class="high-scores"></ul>
+        <button id="resetBtn" class="reset-btn btn hide">RESET QUIZ</button>
+    </div>
+
     </div>
    
 

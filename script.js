@@ -21,7 +21,6 @@ let shuffledQuestions, currentQuestionIndex;
 
 document.addEventListener('DOMContentLoaded', () => { 
 
-
   startButton.addEventListener("click", startGame);
   nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (startTime <= 0) {
         // Game over
         timer.innerHTML = "GAME OVER";
-        gameOver();
         clearInterval(interval);
       } else {
         timer.innerHTML = 'TIME LEFT: ' + startTime;
@@ -42,11 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, 1000);
 
-    function gameOver() {
-      window.location.replace("http://ghudson46.github.io/code-quiz-HW4/highscore.html");
-    }
-    
-    console.log(interval);
     startButton.classList.add('hide');
     timer.classList.remove('hide');
     points.classList.remove('hide');
@@ -98,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       finishBtn.innerText = 'Finish';
       finishBtn.classList.remove('hide');
-      finishBtn.addEventListener("click", finalScore);
     }
   }
   
@@ -124,12 +116,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function showFinalScore(){
+    questionContainerEl.classList.add('hide');
+    questionEl.classList.add('hide');
+    answerButtonsEl.classList.add('hide');
+    nextButton.classList.add('hide');
+    yourNameInput.classList.remove('hide');
+
+    scoreCountP.innerText = "Final Score: " + score; // Display final score
+    clearTimeout(timerID); //Stop timer
+}
+
   
   function clearStatusClass(element, correct) {
       element.classList.remove('correct');
       element.classList.remove('wrong');
   }
-  
+
   
   var questions = [
     {
@@ -268,6 +271,5 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
     }
   ]
-  
   
   });

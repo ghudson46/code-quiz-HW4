@@ -23,6 +23,19 @@ h1 {
   -webkit-text-stroke-color: gold;
 }
 
+h3 {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: gold;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -173,8 +186,15 @@ p {
     width: 150px;
   }
   .container {
-    width: 500px;
-    margin-left: 50px;
+    width: 100%;
+  }
+  
+  #countdown {
+    font-size: 14px;
+  }
+
+  #point-counter {
+      font-size: 14px;
   }
 }
 
