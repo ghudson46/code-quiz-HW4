@@ -191,13 +191,13 @@ p {
   }
   
   #countdown {
-    padding: 20px 15px 30px 10px;
-    font-size: 24px;
+    padding: 20px 15px 30px 20px;
+    font-size: 16px;
   }
 
   #point-counter {
-    padding: 20px 15px 30px 25px;
-    font-size: 24px;
+    padding: 20px 15px 30px 30px;
+    font-size: 16px;
   }
 }
 
