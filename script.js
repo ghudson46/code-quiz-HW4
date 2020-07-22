@@ -32,12 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
     var interval = setInterval(() => {
       if (startTime <= 0) {
         // Game over
-        timer.innerHTML = "GAME OVER";
+        timer.innerHTML = "TIMES UP";
         clearInterval(interval);
         nextButton.classList.add('hide');
         answerButtonsEl.classList.add('hide');
         finishBtn.innerText = 'Finish';
         finishBtn.classList.remove('hide');
+        document.getElementById('myimage').src="assets/gameover.jpg"
         questionEl.innerHTML = "CLICK FINISH TO ENTER YOUR SCORE";
       } else {
         timer.innerHTML = 'TIME LEFT: ' + startTime;
