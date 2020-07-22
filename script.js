@@ -117,14 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showFinalScore(){
-    questionContainerEl.classList.add('hide');
-    questionEl.classList.add('hide');
-    answerButtonsEl.classList.add('hide');
-    nextButton.classList.add('hide');
-    yourNameInput.classList.remove('hide');
-
-    scoreCountP.innerText = "Final Score: " + score; // Display final score
-    clearTimeout(timerID); //Stop timer
+    var finalScore = gameScore;
+    finalScore.innerHTML = 'FINAL SCORE: ' + gameScore;
 }
 
   
