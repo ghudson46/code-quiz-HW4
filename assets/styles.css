@@ -184,9 +184,11 @@ p {
 
   p {
     width: 150px;
+    font-size: 14px;
   }
   .container {
     width: 100%;
+    margin-left: 15px;
   }
   
   #countdown {
