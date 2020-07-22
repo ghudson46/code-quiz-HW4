@@ -185,6 +185,11 @@ p {
   p {
     width: 150px;
     font-size: 14px;
+    color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: gold;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
   .container {
     width: 100%;
@@ -192,11 +197,11 @@ p {
   }
   
   #countdown {
-    font-size: 14px;
+    visibility: none;
   }
 
   #point-counter {
-      font-size: 14px;
+      visibility: none;
   }
 }
 
