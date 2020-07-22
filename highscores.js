@@ -1,23 +1,22 @@
 const inputInitials = document.getElementById("inputInitials");
 const inputScore = document.getElementById("inputScore");
 const enterScore = document.getElementById("enterScore");
-const isOutput = document.getElementById("isOutput");
+const lsOutput = document.getElementById("isOutput");
+
 
 enterScore.onclick = function() {
-  const initial = inputInitials.value;
-  const score = inputScore.value;
+  const key = inputInitials.value;
+  const value = inputScore.value;
 
-  if ( initial && score) {
-    localStorage.setItem(initial, score);
+  if (key && value) {
+    localStorage.setItem(key, value);
     location.reload();
   }
 };
 
-
-
 for (let i = 0; i < localStorage.length; i++) {
-  const initial = localStorage.initial(i);
-  const score = localStorage.getItem(initial);
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
 
-  isOutput.innerHTML += `${initial}: ${score}<br />`;
+    lsOutput.innerHTML += `${key}: ${value}<br />`;
 }
