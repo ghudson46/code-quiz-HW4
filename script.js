@@ -9,8 +9,8 @@ var image = document.getElementById("myimage");
 var timer = document.getElementById("countdown");
 var points = document.getElementById("point-counter");
 var r2 = document.getElementById("correct-sound");
-var chewie = document.getElementById("wrong-sound");
-var blastDoor = document.getElementById("next-sound");
+var scream = document.getElementById("wrong-sound");
+var saberSlash = document.getElementById("next-sound");
 var saberDown = document.getElementById("saberDown");
 var gameScore = 0;
 var finishBtn = document.getElementById("finish-btn");
@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   startButton.addEventListener("click", startGame);
   nextButton.addEventListener("click", () => {
+    saberSlash.play();
     currentQuestionIndex++;
-    blastDoor.play();
     setNextQuestion();
   });
   
@@ -34,19 +34,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // Game over
         timer.innerHTML = "GAME OVER";
         clearInterval(interval);
+        nextButton.classList.add('hide');
+        answerButtonsEl.classList.add('hide');
+        finishBtn.innerText = 'Finish';
+        finishBtn.classList.remove('hide');
+        questionEl.innerHTML = "CLICK FINISH TO ENTER YOUR SCORE";
       } else {
         timer.innerHTML = 'TIME LEFT: ' + startTime;
         startTime--;
       }
     }, 1000);
-
+    saberSound.play();
     startButton.classList.add('hide');
     timer.classList.remove('hide');
     points.classList.remove('hide');
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     questionContainerEl.classList.remove('hide');
-    saberSound.play();
     setNextQuestion();
   }
   
@@ -111,8 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
       gameScore++;
       points.innerHTML = 'SCORE: ' + gameScore; 
     } else {
+      scream.play();
       startTime = startTime - 5;
-      chewie.play();
+      
     }
   }
 
