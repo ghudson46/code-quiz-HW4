@@ -184,24 +184,20 @@ p {
 
   p {
     width: 150px;
-    font-size: 14px;
-    color: black;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: gold;
-  font-weight: bold;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
   .container {
     width: 100%;
-    margin-left: 15px;
+    margin-left: 50px;
   }
   
   #countdown {
-    visibility: none;
+    padding: 20px 15px 30px 10px;
+    font-size: 24px;
   }
 
   #point-counter {
-      visibility: none;
+    padding: 20px 15px 30px 25px;
+    font-size: 24px;
   }
 }
 
