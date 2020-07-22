@@ -13,8 +13,9 @@ var chewie = document.getElementById("wrong-sound");
 var blastDoor = document.getElementById("next-sound");
 var saberDown = document.getElementById("saberDown");
 var gameScore = 0;
-var finishBtn = document.getElementById("finish-btn")
+var finishBtn = document.getElementById("finish-btn");
 var startTime = 45;
+var finalScore = document.getElementById("finalScore");
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -32,13 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
     var interval = setInterval(() => {
       if (startTime <= 0) {
         // Game over
-        timer.innerHTML = "GAME OVER"
+        timer.innerHTML = "GAME OVER";
+        gameOver();
         clearInterval(interval);
       } else {
         timer.innerHTML = 'TIME LEFT: ' + startTime;
         startTime--;
       }
     }, 1000);
+
+    function gameOver() {
+      window.location.replace("http://ghudson46.github.io/code-quiz-HW4/highscore.html");
+    }
     
     console.log(interval);
     startButton.classList.add('hide');
@@ -92,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       finishBtn.innerText = 'Finish';
       finishBtn.classList.remove('hide');
+      finishBtn.addEventListener("click", finalScore);
     }
   }
   
@@ -116,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
       chewie.play();
     }
   }
+
   
   function clearStatusClass(element, correct) {
       element.classList.remove('correct');
