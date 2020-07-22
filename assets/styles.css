@@ -222,20 +222,26 @@ and (-webkit-device-pixel-ratio : 3)
 and (orientation : portrait) {
 
   #myimage {
-    float: left;
     width: 300px;
-    height: 150px;
-    margin: 0 40px 0 40px;
+    height: 200px;
+  }
+
+  .container {
+    width: 300px;
+    width: 200px;
+  }
+  #gameContainer {
+    position: absolute;
+    left: 50%;
+    left: -150px;
+    top: 50%;
+    top: -100px;
   }
 
   p {
     width: 150px;
   }
-  .container {
-    float: left;
-    width: 300px;
-    margin-left: 0 40px 0 40px;
-  }
+ 
   
   #countdown {
     padding: 20px 15px 30px 20px;
@@ -254,14 +260,13 @@ and (orientation : portrait) {
   }
 
   .high-scores-legend {
-    float: left;
     width: 100%;
     position: absolute;
-    bottom:100px;
+    bottom:50px;
   }
 
   .input-form {
-    width: 30%;
+    width: 35%;
     position: absolute;
     top: 20px;
     left: 20px;
