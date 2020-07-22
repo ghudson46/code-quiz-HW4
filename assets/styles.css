@@ -215,41 +215,56 @@ fieldset {
 }
 
 
-@media only screen and (max-width: 800px) {
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) {
+
   #myimage {
+    float: left;
     width: 300px;
     height: 150px;
-    margin: 0 auto;
+    margin: 0 40px 0 40px;
   }
 
   p {
     width: 150px;
   }
   .container {
-    width: 80%;
-    margin-left: 0 auto;
+    float: left;
+    width: 300px;
+    margin-left: 0 40px 0 40px;
   }
   
   #countdown {
     padding: 20px 15px 30px 20px;
     font-size: 16px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
   }
 
   #point-counter {
     padding: 20px 15px 30px 30px;
     font-size: 16px;
-  }
-
-  #high-scores-title {
     position: absolute;
-    top: 0;
-    left: 100px;
+    top: 20px;
+    right: 20px;
   }
 
   .high-scores-legend {
+    float: left;
+    width: 100%;
     position: absolute;
-    bottom:200px;
-    left: 50px;
+    bottom:100px;
+  }
+
+  .input-form {
+    width: 30%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
   }
 
 }

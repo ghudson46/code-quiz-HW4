@@ -5,6 +5,7 @@ var answerButtonsEl = document.getElementById("answer-buttons");
 var nextButton = document.getElementById("next-btn");
 var container = document.getElementsByClassName("container");
 var controls = document.getElementsByClassName('controls');
+var restartBtn = document.getElementById("restartBtn");
 var gameContainer = document.getElementById("gameContainer");
 var highscores = document.getElementById("highscores");
 var theme = document.getElementById("starWarsTheme");
@@ -151,19 +152,23 @@ document.addEventListener('DOMContentLoaded', () => {
   enterScore.onclick = function() {
     const key = inputInitials.value;
     const value = inputScore.value;
+    
+    restartBtn.classList.remove('hide');
+    
   
     if (key && value) {
       localStorage.setItem(key, value);
-      location.reload();
     }
-  };
-  
-  for (let i = 0; i < localStorage.length; i++) {
+    for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
       const value = localStorage.getItem(key);
       lsOutput.innerHTML += `${key}: ${value}<br />`;
      
   }
+  
+  };
+  
+  
 
   
   var questions = [
