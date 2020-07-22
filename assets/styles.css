@@ -60,6 +60,7 @@ p {
 
 input {
   padding: 7px;
+  margin: 5px;
   height: 40px;
 }
 
@@ -137,16 +138,17 @@ fieldset {
 }
 
 .input-form {
-  margin-bottom: 150px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 20%;
 }
 
 .high-scores-legend {
   width: 400px;
   text-align: center;
   font-size: 36px;
-  position: absolute;
-  bottom: 150px;
-  left: 450px;
+  
 }
 
 .hide {

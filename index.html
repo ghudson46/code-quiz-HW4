@@ -15,7 +15,8 @@
     <audio src="assets/clash 01 (1).mp3" id="next-sound"></audio>
     <audio id="saberSound" src="assets/SaberOn.mp3"></audio>
     <audio id="saberDown" src="assets/saberdown.wav"></audio>
-
+  
+  <div id="gameContainer">
     <p id="countdown" class ="hide"></p>
     <p id="point-counter" class="hide"></p>
     <div class="container2">
@@ -39,12 +40,55 @@
       <div class="controls">
         <button id="start-btn" class="start-btn btn">START</button>
         <button id="next-btn" class="next-btn btn hide">NEXT</button>
-        <a href="highscores.html"><button id="finish-btn" class="finish-btn btn hide">FINISH</button></a>
+        <button id="finish-btn" class="finish-btn btn hide">FINISH</button>
+        <div id="highscores" class="hide">
+  
+
+          <fieldset class="input-form">
+        
+            <legend>Enter Initials & Score</legend>
+        
+            <input id="inputInitials" type="text" placeholder="Enter Initials">
+        
+            <input id="inputScore" type="text" placeholder="Enter Score">
+        
+            <button type="button" id="enterScore" class="btn">Enter Score</button>
+        
+          </fieldset>
+          
+          <fieldset class="high-scores-legend">
+            <legend>High Scores</legend>
+            <div id="isOutput"></div>
+          </fieldset>
+        </div>
       </div>
 
   
 
     </div>
+  </div>
+
+  <div id="highscores" class="hide">
+  
+
+  <fieldset class="input-form">
+
+    <legend>Enter Initials & Score</legend>
+
+    <input id="inputInitials" type="text" placeholder="Enter Initials">
+
+    <input id="inputScore" type="text" placeholder="Enter Score">
+
+    <button type="button" id="enterScore" class="btn">Enter Score</button>
+
+  </fieldset>
+  
+  <fieldset class="high-scores-legend">
+    <legend>High Scores</legend>
+    <div id="isOutput"></div>
+  </fieldset>
+</div>
+
    
 
   <script type="text/javascript" src="script.js"></script>

@@ -3,11 +3,19 @@ var questionContainerEl = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
 var answerButtonsEl = document.getElementById("answer-buttons");
 var nextButton = document.getElementById("next-btn");
+var container = document.getElementsByClassName("container");
+var controls = document.getElementsByClassName('controls');
+var gameContainer = document.getElementById("gameContainer");
+var highscores = document.getElementById("highscores");
 var theme = document.getElementById("starWarsTheme");
 var saberSound = document.getElementById("saberSound");
 var image = document.getElementById("myimage");
 var timer = document.getElementById("countdown");
 var points = document.getElementById("point-counter");
+const inputInitials = document.getElementById("inputInitials");
+const inputScore = document.getElementById("inputScore");
+const enterScore = document.getElementById("enterScore");
+const lsOutput = document.getElementById("isOutput");
 var r2 = document.getElementById("correct-sound");
 var scream = document.getElementById("wrong-sound");
 var saberSlash = document.getElementById("next-sound");
@@ -20,12 +28,18 @@ var finalScore = document.getElementById("finalScore");
 let shuffledQuestions, currentQuestionIndex;
 
 document.addEventListener('DOMContentLoaded', () => { 
-
+  finishBtn.addEventListener("click", function(){
+    gameContainer.classList.add('hide');
+    highscores.classList.remove('hide');
+  });
   startButton.addEventListener("click", startGame);
   nextButton.addEventListener("click", () => {
     saberSlash.play();
     currentQuestionIndex++;
     setNextQuestion();
+  });
+  finishBtn.addEventListener("click", function(){
+
   });
   
   function startGame() {
@@ -36,10 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(interval);
         nextButton.classList.add('hide');
         answerButtonsEl.classList.add('hide');
-        finishBtn.innerText = 'Finish';
-        finishBtn.classList.remove('hide');
-        document.getElementById('myimage').src="assets/gameover.jpg"
-        questionEl.innerHTML = "CLICK FINISH TO ENTER YOUR SCORE";
+        questionContainerEl.classList.add('hide');
+        questionEl.classList.add('hide');
+        timer.classList.add('hide');
+        highscores.classList.remove('hide');
+        
       } else {
         timer.innerHTML = 'TIME LEFT: ' + startTime;
         startTime--;
@@ -131,6 +146,23 @@ document.addEventListener('DOMContentLoaded', () => {
   function clearStatusClass(element, correct) {
       element.classList.remove('correct');
       element.classList.remove('wrong');
+  }
+
+  enterScore.onclick = function() {
+    const key = inputInitials.value;
+    const value = inputScore.value;
+  
+    if (key && value) {
+      localStorage.setItem(key, value);
+      location.reload();
+    }
+  };
+  
+  for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      const value = localStorage.getItem(key);
+      lsOutput.innerHTML += `${key}: ${value}<br />`;
+     
   }
 
   
