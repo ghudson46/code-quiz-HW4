@@ -4,13 +4,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
-  --hue-neutral: 200;
-  --hue-wrong: 0;
-  --hue-correct: 145;
-
-}
-
 h1 {
   font-size: 48px;
   font-weight: bold;
