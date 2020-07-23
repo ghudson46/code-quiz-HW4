@@ -24,7 +24,7 @@ var saberSlash = document.getElementById("next-sound");
 var saberDown = document.getElementById("saberDown");
 var gameScore = 0;
 var finishBtn = document.getElementById("finish-btn");
-var startTime = 45;
+var startTime = 60;
 var finalScore = document.getElementById("finalScore");
 
 let shuffledQuestions, currentQuestionIndex;
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
     },
     {
-      question: 'What is the galaxy\'s largets pod race?',
+      question: 'What is the galaxy\'s largest pod race?',
       answers: [
         {text: 'The Wattoo 3000', correct: false},
         {text: 'The Boonta Eve Classic', correct: true},
@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
     },
     {
-      question: 'What was Obi-Wan Kebobi\'s alias when he went into hiding?',
+      question: 'What was Obi-Wan Kenobi\'s alias when he went into hiding?',
       answers: [
         {text: 'Obi-Wan Jinn', correct: false},
         {text: 'The man with no name', correct: false},
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
     },
     {
-      question: 'Who is the commander of the Death Star in A New Hope??',
+      question: 'Who is the commander of the Death Star in A New Hope?',
       answers: [
         {text: 'Grand Moff Tarkin', correct: true},
         {text: 'Darth Vader', correct: false},
@@ -444,6 +444,24 @@ document.addEventListener('DOMContentLoaded', () => {
         {text: 'Darth Geonosia', correct: false},
         {text: 'Gardola the Hutt', correct: false},
         {text: 'Watto', correct: false}
+      ],
+    },
+    {
+      question: 'What was Luke Skywalker\'s name supposed to be?',
+      answers: [
+        {text: 'Luke Starkiller', correct: true},
+        {text: 'Luke Vader', correct: false},
+        {text: 'Iden voss', correct: false},
+        {text: 'Lars Starhopper', correct: false}
+      ],
+    },
+    {
+      question: 'How many years pass between Return of the Jedi and the Force Awakens?',
+      answers: [
+        {text: '19', correct: false},
+        {text: '10', correct: false},
+        {text: '30', correct: true},
+        {text: '50', correct: false}
       ],
     }
   ]
