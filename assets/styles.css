@@ -19,10 +19,12 @@ h1 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 32px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
-  color: gold;
-  
+  color: black;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: gold;
 }
 
 h3 {
