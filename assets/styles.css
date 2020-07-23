@@ -25,6 +25,13 @@ h1 {
   -webkit-text-stroke-color: gold;
 }
 
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: gold;
+  
+}
+
 h3 {
   font-size: 48px;
   font-weight: bold;
@@ -65,9 +72,6 @@ input {
   height: 40px;
 }
 
-legend {
-  color: white;
-}
 
 fieldset {
   margin-bottom: 20px;
@@ -222,7 +226,7 @@ fieldset {
 @media only screen 
 and (max-width : 600px) 
 {
-
+/* deleted <h2> title for input. replace if this doesnt work */
   #myimage {
     width: 90%;
     height: 40%;
@@ -247,13 +251,7 @@ and (max-width : 600px)
 
   .input-form, #inputInitials, #inputScore {
     height: 15%;
-    padding: 20px;  /*added this*/
   }
-
-    /* commented out */
-  /* .input-form {
-    padding: 20px;
-  } */
 
   .controls {
     width: 90%;
