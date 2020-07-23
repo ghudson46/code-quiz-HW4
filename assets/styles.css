@@ -249,8 +249,14 @@ and (max-width : 600px)
     height: 15%;
   }
 
-  #inputInitials, #inputScore {
-    width: 25px;
+    /* most recent changes. delete if looks badg */
+  .input-form {
+    padding: 20px;
+  }
+
+  .controls {
+    width: 90%;
+    margin: 0 auto;
   }
 
 }
