@@ -221,55 +221,7 @@ and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3)
 and (orientation : portrait) {
 
-  #myimage {
-    width: 250px;
-    height: 100px;
-  }
 
-  .container {
-    width: 250px;
-  }
-  #gameContainer {
-    position: absolute;
-    left: 50%;
-    left: -150px;
-    top: 50%;
-    top: -100px;
-  }
-
-  p {
-    width: 150px;
-  }
- 
-  
-  #countdown {
-    padding: 20px 15px 30px 20px;
-    font-size: 16px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-
-  #point-counter {
-    padding: 20px 15px 30px 30px;
-    font-size: 16px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
-  .high-scores-legend {
-    width: 100%;
-    position: absolute;
-    bottom:50px;
-  }
-
-  .input-form {
-    width: 35%;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
 
 }
 
