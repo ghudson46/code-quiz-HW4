@@ -1,3 +1,4 @@
+// global variables
 var startButton = document.getElementById("start-btn");
 var questionContainerEl = document.getElementById("question-container");
 var questionEl = document.getElementById("question");
@@ -28,12 +29,16 @@ var finalScore = document.getElementById("finalScore");
 
 let shuffledQuestions, currentQuestionIndex;
 
+// starts everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => { 
+  // runs when finish button is clicked
   finishBtn.addEventListener("click", function(){
     gameContainer.classList.add('hide');
     highscores.classList.remove('hide');
   });
+  // runs when start button is clicked
   startButton.addEventListener("click", startGame);
+  // runs when next button is clicked
   nextButton.addEventListener("click", () => {
     saberSlash.play();
     currentQuestionIndex++;
@@ -42,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   finishBtn.addEventListener("click", function(){
 
   });
-  
+  // function that starts the game
   function startGame() {
     var interval = setInterval(() => {
       if (startTime <= 0) {
@@ -71,11 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
     setNextQuestion();
   }
   
+  // selects the next question
   function setNextQuestion() {
     resetState();
     showQuestion(shuffledQuestions[currentQuestionIndex]);
   }
   
+  // displays content of question selected and displays on app with answer buttons
   function showQuestion(question) {
     questionEl.innerText = question.question;
     question.answers.forEach(answer => {
@@ -90,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
   
+  // reset content
   function resetState() {
     clearStatusClass(document.body);
     nextButton.classList.add('hide');
@@ -99,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
+  // selects answer and runs functions based on right or wrong choice
   function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
@@ -115,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  
+  // changes class of elements based on right or wrong answer
   function setStatusClass(element, correct) {
     // Shouldn't need this since you are removing the button and recreating
     // clearStatusClass(element)
@@ -126,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
+  // plays a different sound for a right or wrong answer, gives a point for a right answer and deducts 5 seconds for a wrong answer
   function setScore(correct) {
     if (correct) {
       r2.play();
@@ -143,12 +153,13 @@ document.addEventListener('DOMContentLoaded', () => {
     finalScore.innerHTML = 'FINAL SCORE: ' + gameScore;
 }
 
-  
+  // clears the classes from previous answer results
   function clearStatusClass(element, correct) {
       element.classList.remove('correct');
       element.classList.remove('wrong');
   }
 
+  // adds user initials and score to the local storage when the enter score button is clicked
   enterScore.onclick = function() {
     const key = inputInitials.value;
     const value = inputScore.value;
@@ -170,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
 
-  
+  // array filled with question objects that will be randomly selected for the quiz
   var questions = [
     {
       question: 'What is the name of Han Solo\'s ship?',
