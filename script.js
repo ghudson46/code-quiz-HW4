@@ -44,9 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentQuestionIndex++;
     setNextQuestion();
   });
-  finishBtn.addEventListener("click", function(){
-
-  });
+  
   // function that starts the game
   function startGame() {
     var interval = setInterval(() => {
@@ -147,11 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
       
     }
   }
-
-  function showFinalScore(){
-    var finalScore = gameScore;
-    finalScore.innerHTML = 'FINAL SCORE: ' + gameScore;
-}
 
   // clears the classes from previous answer results
   function clearStatusClass(element, correct) {
