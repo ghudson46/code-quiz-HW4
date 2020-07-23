@@ -222,13 +222,12 @@ and (-webkit-device-pixel-ratio : 3)
 and (orientation : portrait) {
 
   #myimage {
-    width: 300px;
-    height: 200px;
+    width: 250px;
+    height: 100px;
   }
 
   .container {
-    width: 300px;
-    width: 200px;
+    width: 250px;
   }
   #gameContainer {
     position: absolute;
