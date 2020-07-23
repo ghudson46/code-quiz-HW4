@@ -301,10 +301,145 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       question: 'What was Obi-Wan Kebobi\'s alias when he went into hiding?',
       answers: [
-        {text: 'Obi-Wan Ginn', correct: false},
+        {text: 'Obi-Wan Jinn', correct: false},
         {text: 'The man with no name', correct: false},
         {text: 'Ben Kenobi', correct: true},
         {text: 'Gandalf', correct: false}
+      ],
+    },
+    {
+      question: 'In what movie did Boba Fett make is debut?',
+      answers: [
+        {text: 'Empire Strikes Back', correct: false },
+        {text: 'A New Hope', correct: false},
+        {text: 'Star Wars Holiday Special', correct: true },
+        {text: 'Attack of the Clones ', correct: false }
+      ],
+    },
+    {
+      question: 'What species is Bib Fortuna?',
+      answers: [
+        {text: 'Twi\'lek', correct: true},
+        {text: 'Nemoidian', correct: false},
+        {text: 'Togruta', correct: false},
+        {text: 'Caminoan', correct: false}
+      ],
+    },
+    {
+      question: 'What powers a jedi\'s lightsaber, as well as the death star\'s cannon?',
+      answers: [
+        {text: 'the force', correct: false},
+        {text: 'gas', correct: false},
+        {text: 'tibana', correct: false},
+        {text: 'kyber crystals', correct: true}
+      ],
+    },
+    {
+      question: 'What is Count Dooku\'s sith name?',
+      answers: [
+        {text: 'Darth Nihilus', correct: false},
+        {text: 'Darth Tyrannus', correct: true },
+        {text: 'Darth Plagus', correct: false},
+        {text: 'Darth Dooku', correct: false}
+      ],
+    },
+    {
+      question: 'Who is the commander of the Death Star in A New Hope??',
+      answers: [
+        {text: 'Grand Moff Tarkin', correct: true},
+        {text: 'Darth Vader', correct: false},
+        {text: 'Moff Gideon', correct: false},
+        {text: 'Admiral Thrawn', correct: false}
+      ],
+    },
+    {
+      question: 'What species is Selacious Crumb?',
+      answers: [
+        {text: 'Kowakian Monkey Lizard', correct: true},
+        {text: 'Space Slug', correct: false},
+        {text: 'Genosian Brain Worm', correct: false},
+        {text: 'Geonosian', correct: false}
+      ],
+    },
+    {
+      question: 'Which band is Sy Snootles a member of ?',
+      answers: [
+        {text: 'Jedi Rocks', correct: false},
+        {text: 'Rontu Rockers', correct: false},
+        {text: 'Evar Orbus and his Galactic Jizz Whalers', correct: true},
+        {text: 'The incredible sound of Dr. Funk', correct: false}
+      ],
+    },
+    {
+      question: 'What is the wookie\'s verson of Christmas?',
+      answers: [
+        {text: 'life day', correct: true},
+        {text: 'earth day', correct: false},
+        {text: 'force day', correct: false},
+        {text: 'love day', correct: false}
+      ],
+    },
+    {
+      question: 'Who was responsible for Rey and Kylo\'s connection through the force?',
+      answers: [
+        {text: 'Supreme Leader Snoke', correct: false},
+        {text: 'Luke Skywalker', correct: false},
+        {text: 'Darth Plagus', correct: false},
+        {text: 'Emperor Palpetine', correct: true}
+      ],
+    },
+    {
+      question: 'What last name does Rey adopt at the end of The Rise of Skywalker?',
+      answers: [
+        {text: 'Kenobi', correct: false},
+        {text: 'Skywalker', correct: true},
+        {text: 'Palpetine', correct: false},
+        {text: 'Solo', correct: false}
+      ],
+    },
+    {
+      question: 'Who trained Obi-Wan Kenobi?',
+      answers: [
+        {text: 'Yoda', correct: true},
+        {text: 'Qui-Gon Jinn', correct: true},
+        {text: 'Count Dooku', correct: false},
+        {text: 'Mace Windu', correct: false}
+      ],
+    },
+    {
+      question: 'Who does Luke see behind Darth Vader\'s mask in the cave on Dagobah?',
+      answers: [
+        {text: 'Anakin', correct: false},
+        {text: 'Padme', correct: false},
+        {text: 'a lizard', correct: false},
+        {text: 'himself', correct: true}
+      ],
+    },
+    {
+      question: 'Which color was not a lightsaber color in a movie or TV show?',
+      answers: [
+        {text: 'black', correct: false},
+        {text: 'white', correct: false},
+        {text: 'yellow', correct: false},
+        {text: 'pink', correct: true}
+      ],
+    },
+    {
+      question: 'Which droid model was created to be a bounty hunter?',
+      answers: [
+        {text: 'protocol droid', correct: false},
+        {text: 'IG-88', correct: true},
+        {text: 'R2 units', correct: false},
+        {text: 'BB units', correct: false}
+      ],
+    },
+    {
+      question: 'What is the name of the Geonosian leader?',
+      answers: [
+        {text: 'Poggle the Lesser', correct: true},
+        {text: 'Darth Geonosia', correct: false},
+        {text: 'Gardola the Hutt', correct: false},
+        {text: 'Watto', correct: false}
       ],
     }
   ]
