@@ -11,7 +11,7 @@ CSS
 javascript
 
 # Images
-Landing Page <img scr="assets/landing.png">
+Landing Page <img src="assets/landing.png">
 Gameplay <img src="assets/game.png">
 High Score <img src="assets/highscore.png">
 
